@@ -1,13 +1,10 @@
 #ifndef WIDGET_H
 #define WIDGET_H
 
-#include <QWidget>
+#include <QGraphicsView>
+#include "cardsence.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class Widget; }
-QT_END_NAMESPACE
-
-class Widget : public QWidget
+class Widget : public QGraphicsView
 {
     Q_OBJECT
 
@@ -16,6 +13,9 @@ public:
     ~Widget();
 
 private:
-    Ui::Widget *ui;
+    CardSence *cardSence;
+
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
 };
 #endif // WIDGET_H

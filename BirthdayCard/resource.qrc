@@ -1,2 +1,20 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/image">
+        <file>resources/xuehua.gif</file>
+        <file>resources/touguan.svg</file>
+        <file>resources/HAPPYBIRTHDAY.png</file>
+        <file>resources/zhufu.svg</file>
+        <file>resources/cake.png</file>
+        <file>resources/qiqiu.png</file>
+        <file>resources/kuai.png</file>
+        <file>resources/le.png</file>
+        <file>resources/ri.png</file>
+        <file>resources/sheng.png</file>
+        <file>resources/caiqi.svg</file>
+        <file>resources/zhuagnshi1.svg</file>
+        <file>resources/zhuagnshi2.svg</file>
+    </qresource>
+    <qresource prefix="/music">
+        <file>resources/music.mp3</file>
+    </qresource>
+</RCC>
