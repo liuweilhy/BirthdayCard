@@ -15,6 +15,6 @@
         <file>resources/zhuagnshi2.svg</file>
     </qresource>
     <qresource prefix="/music">
-        <file>resources/music.mp3</file>
+        <file>resources/music.wav</file>
     </qresource>
 </RCC>

@@ -12,8 +12,12 @@ CardSence::CardSence(QObject *parent) : QGraphicsScene(parent)
 {
     this->setBackgroundBrush(QBrush(QColor(253, 225, 229)));
 
+
     // 初始化各个Item
     InitItem();
+    // 播放音乐
+    player = new QSound(":/music/resources/music.wav");
+    Music(true);
 }
 
 // 设置文本
@@ -171,4 +175,15 @@ void CardSence::InitItem()
     this->addItem(itemDate);
     this->addItem(itemCake);
     this->addItem(itemQiqiu);
+}
+
+void CardSence::Music(bool on)
+{
+    if (on)
+    {
+        player->play();
+        player->setLoops(-1);
+    }
+    else
+        player->stop();
 }

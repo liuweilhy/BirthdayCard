@@ -9,6 +9,7 @@
 #include <QGraphicsPixmapItem>
 #include <QGraphicsSimpleTextItem>
 #include <QGraphicsSvgItem>
+#include <QSound>
 
 class CardSence : public QGraphicsScene
 {
@@ -16,11 +17,15 @@ class CardSence : public QGraphicsScene
 public:
     explicit CardSence(QObject *parent = nullptr);
 
+    // 设置文本
+    void SetText(QString zhufu, QString date);
+
+    // 音乐开关
+    void Music(bool on = true);
+
 protected:
     // 初始化
     void InitItem();
-    // 设置文本
-    void SetText(QString zhufu, QString date);
 
 private:
     // 尺寸
@@ -57,6 +62,9 @@ private:
     QGraphicsPixmapItem *itemCake;
     // 气球
     QGraphicsPixmapItem *itemQiqiu;
+
+    // 音乐
+    QSound *player;
 
 signals:
 
