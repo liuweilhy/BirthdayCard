@@ -6,10 +6,11 @@
 #endif
 
 #include <QGraphicsScene>
-#include <QGraphicsPixmapItem>
-#include <QGraphicsSimpleTextItem>
 #include <QGraphicsSvgItem>
+#include <QLabel>
 #include <QSound>
+#include <QStateMachine>
+#include "ObjectGraphicsItem.h"
 
 class CardSence : public QGraphicsScene
 {
@@ -27,44 +28,62 @@ protected:
     // 初始化
     void InitItem();
 
+    // 动画
+    void SetAnimations();
+
 private:
-    // 尺寸
+    // 场景尺寸
     double width = 520.0;
     double height = 900.0;
+
+    // 初始幕布
+    ObjectRectItem *itemRect0;
+
+    // 白色幕布
+    ObjectPixmapItem *itemWhite1;
+    ObjectPixmapItem *itemWhite2;
+
     // 边框
-    QGraphicsRectItem *itemRect;
+    ObjectRectItem *itemRect;
+
+    // 背景（用QLabel是为了支持gif动画）
+    QLabel *backgroundLabel;
 
     // 彩旗
-    QGraphicsSvgItem *itemCaiqi1;
-    QGraphicsSvgItem *itemCaiqi2;
+    ObjectSvgItem *itemCaiqi1;
+    ObjectSvgItem *itemCaiqi2;
 
     // 彩旗旁边的装饰
-    QGraphicsSvgItem *itemZhuangshi1;
-    QGraphicsSvgItem *itemZhuangshi2;
+    ObjectSvgItem *itemZhuangshi1;
+    ObjectSvgItem *itemZhuangshi2;
 
     // 生日快乐四个字
-    QGraphicsPixmapItem *itemSheng;
-    QGraphicsPixmapItem *itemRi;
-    QGraphicsPixmapItem *itemKuai;
-    QGraphicsPixmapItem *itemLe;
+    ObjectPixmapItem *itemSheng;
+    ObjectPixmapItem *itemRi;
+    ObjectPixmapItem *itemKuai;
+    ObjectPixmapItem *itemLe;
 
     // 头冠
-    QGraphicsSvgItem *itemTouguan;
+    ObjectSvgItem *itemTouguan;
     // HAPPY BIRTHDAY
-    QGraphicsPixmapItem *itemHappyBirthday;
+    ObjectPixmapItem *itemHappyBirthday;
     // 祝福语背景
-    QGraphicsSvgItem *itemZhufuBack;
+    ObjectSvgItem *itemZhufuBack;
     // 祝福语
-    QGraphicsSimpleTextItem *itemZhufu;
+    ObjectSimpleTextItem *itemZhufu;
     // 日期
-    QGraphicsSimpleTextItem *itemDate;
+    ObjectSimpleTextItem *itemDate;
     // 蛋糕
-    QGraphicsPixmapItem *itemCake;
+    ObjectPixmapItem *itemCake;
     // 气球
-    QGraphicsPixmapItem *itemQiqiu;
+    ObjectPixmapItem *itemQiqiu;
 
     // 音乐
     QSound *player;
+
+
+    // 动画状态机
+    QStateMachine machine;
 
 signals:
 

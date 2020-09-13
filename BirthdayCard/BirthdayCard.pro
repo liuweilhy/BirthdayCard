@@ -21,6 +21,7 @@ SOURCES += \
     widget.cpp
 
 HEADERS += \
+    ObjectGraphicsItem.h \
     cardsence.h \
     widget.h
 

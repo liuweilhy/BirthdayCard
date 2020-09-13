@@ -13,6 +13,7 @@
         <file>resources/caiqi.svg</file>
         <file>resources/zhuagnshi1.svg</file>
         <file>resources/zhuagnshi2.svg</file>
+        <file>resources/white.png</file>
     </qresource>
     <qresource prefix="/music">
         <file>resources/music.wav</file>

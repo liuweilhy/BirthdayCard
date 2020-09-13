@@ -3,7 +3,6 @@
 #endif
 
 #include "widget.h"
-#include "ui_widget.h"
 #include <QKeyEvent>
 
 Widget::Widget(QWidget *parent)
